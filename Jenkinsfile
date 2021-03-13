@@ -14,9 +14,9 @@ pipeline {
 	
         stage('Run Tests') {
             parallel {
-                stage('Test On Windows') {
+                stage('Test On master') {
                     agent {
-                        label "Windows_Node"
+                        label "master"
                     }
                     steps {
                         echo "Task1 on Agent"
